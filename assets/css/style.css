@@ -1,0 +1,92 @@
+body {
+  font-family: "Raleway", sans-serif !important;
+  background: #ebeff3 !important;
+  scroll-behavior: smooth;
+  /* background: linear-gradient(
+    16deg,
+    rgba(206, 240, 123, 0.41220238095238093) 0%,
+    rgba(241, 238, 185, 1) 51%,
+    rgba(242, 199, 242, 1) 100%
+  ); */
+}
+.btn1 {
+  width: 140px;
+  height: 50px;
+  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); */
+  overflow: hidden;
+}
+
+.btn1 span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn1:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn1:hover .btn-text-two {
+  top: 50%;
+}
+/* Style for the navigation bar */
+#navbar {
+  position: fixed;
+  top: 0;
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Style for the navigation bar when scrolled */
+#navbar.scrolled {
+  background-color: white;
+}
+.person-name > h1 {
+  font-size: 75px;
+}
+/* width and height of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track (the area on the sides of the thumb) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle (the draggable scrolling element) */
+::-webkit-scrollbar-thumb {
+  background: #fc604d;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fc604d;
+}

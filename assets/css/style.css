@@ -193,13 +193,57 @@ body {
 }
 .footer-links a {
   color: #737373;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease-in;
 }
+
+.footer-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fc604d;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in; /* Change to width transition */
+}
+.readmore {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease-in;
+}
+.readmore::after {
+  transition: width 0.3s ease-in; /* Change to width transition */
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fc604d;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  transition: width 0.3s ease-in; /* Change to width transition */
+}
+.readmore:hover::after {
+  width: 70px;
+  transition: width 0.3s ease-in; /* Smooth transition for width change */
+}
+
+.footer-links a:hover::after {
+  /* Apply the hover effect on the ::after pseudo-element */
+  width: 100%; /* Expand the width on hover */
+  transition: width 0.3s ease-in; /* Smooth transition for width change */
+}
+
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #3366cc;
-  text-decoration: none;
+  color: #fc604d;
+  /* border-bottom: 1px solid #fc604d; */
 }
+
 .footer-links.inline li {
   display: inline-block;
 }
@@ -279,10 +323,10 @@ body {
   background-color: #3b5998;
 }
 .social-icons a.twitter:hover {
-  background-color: #00aced;
+  background-color: #26c417;
 }
 .social-icons a.linkedin:hover {
-  background-color: #007bb6;
+  background-color: #000;
 }
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;
@@ -306,7 +350,7 @@ body {
 }
 .dynamic-txts li {
   list-style: none;
-  color: #fc6d6d;
+  color: #fc604d;
   font-size: 60px;
   font-weight: 500;
   position: relative;
@@ -330,7 +374,7 @@ body {
   height: 100%;
   width: 100%;
   background: #ebeff3;
-  border-left: 2px solid #fc6d6d;
+  border-left: 2px solid #fc604d;
   animation: typing 3s steps(10) infinite;
 }
 @keyframes typing {
@@ -377,4 +421,20 @@ body {
 }
 .container1 {
   animation: contact-opacity 1s forwards;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #fc604d !important;
+  font-weight: 600;
+}
+.nav-link {
+  font-size: 13px;
+}
+.nav-link:hover {
+  color: #fc604d !important;
+  /* font-weight: 600; */
+}
+::selection {
+  background-color: #fc604d;
+  color: #000;
 }
